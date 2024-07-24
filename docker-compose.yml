@@ -1,0 +1,14 @@
+services:
+  smtp-api:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: smtp-api
+    environment:
+      PORT: ${PORT}
+      SMTP_SECRET: ${SMTP_SECRET}
+      FROM_EMAIL: ${FROM_EMAIL}
+      FROM_EMAIL_SMTP: ${FROM_EMAIL_SMTP}
+      SMTP_ADDR: ${SMTP_ADDR}
+    ports:
+      - ${PORT}:${PORT}

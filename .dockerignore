@@ -1,0 +1,5 @@
+.env
+*.png
+*.svg
+README.md
+bin
